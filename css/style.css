@@ -174,3 +174,18 @@
   position:absolute!important;z-index:20!important;touch-action:manipulation!important;
  }
 }
+
+/* Mobile32: leve ampliação (~8%) dos cartazes; hotspots escalam junto. */
+@media(max-width:700px){
+ html,body{overflow-x:hidden!important}
+ .impactos-poster,.armazenamento-poster,.coleta-poster,.educacao-poster,.dicas-poster-wide,.projeto-poster,.trail-poster{
+  width:108vw!important;max-width:none!important;
+  left:50%!important;transform:translateX(-50%)!important;
+ }
+ .impactos-poster-image,.armazenamento-poster-image,.coleta-image-wrap,.educacao-poster-wrap,.dicas-image-wrap,.projeto-poster-interativo{
+  width:100%!important;max-width:100%!important;position:relative!important
+ }
+ .impactos-poster-image>img,.armazenamento-poster-image>img,.coleta-image-wrap>img,.educacao-poster-wrap>img,.dicas-image-wrap>img,.projeto-poster-interativo>img,.trail-poster img{
+  width:100%!important;max-width:100%!important;height:auto!important;
+ }
+}
