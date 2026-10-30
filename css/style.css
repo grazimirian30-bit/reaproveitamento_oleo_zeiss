@@ -175,11 +175,11 @@
  }
 }
 
-/* Mobile32: leve ampliação (~8%) dos cartazes; hotspots escalam junto. */
+/* Mobile33: ampliação proporcional dos cartazes para 114vw no celular. */
 @media(max-width:700px){
  html,body{overflow-x:hidden!important}
  .impactos-poster,.armazenamento-poster,.coleta-poster,.educacao-poster,.dicas-poster-wide,.projeto-poster,.trail-poster{
-  width:108vw!important;max-width:none!important;
+  width:114vw!important;max-width:none!important;
   left:50%!important;transform:translateX(-50%)!important;
  }
  .impactos-poster-image,.armazenamento-poster-image,.coleta-image-wrap,.educacao-poster-wrap,.dicas-image-wrap,.projeto-poster-interativo{
