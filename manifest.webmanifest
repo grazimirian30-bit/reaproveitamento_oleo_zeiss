@@ -1,0 +1,11 @@
+{
+  "name": "Óleo Consciente — Educação Ambiental",
+  "short_name": "Óleo Consciente",
+  "description": "Site educativo sobre coleta e reciclagem de óleo de cozinha usado.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f9f3",
+  "theme_color": "#153c2c",
+  "lang": "pt-BR"
+}
