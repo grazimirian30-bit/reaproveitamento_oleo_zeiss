@@ -152,3 +152,25 @@
  }
  .impactos-hotspot span,.armazenamento-hotspot span,.coleta-hotspot span,.educacao-hotspot span,.dicas-hotspot span,.poster-hotspot span{line-height:1!important}
 }
+
+/* Cartazes ocupando a largura total do celular (mobile31).
+   As áreas clicáveis continuam proporcionais à própria imagem. */
+@media(max-width:700px){
+ .impactos-poster,.armazenamento-poster,.coleta-poster,.educacao-poster,.dicas-poster-wide,.projeto-poster,.trail-poster{
+  position:relative!important;left:50%!important;transform:translateX(-50%)!important;
+  width:100vw!important;max-width:100vw!important;min-width:0!important;
+  margin:14px 0 22px!important;padding:0!important;overflow:visible!important;
+ }
+ .impactos-poster-image,.armazenamento-poster-image,.coleta-image-wrap,.educacao-poster-wrap,.dicas-image-wrap,.projeto-poster-interativo{
+  width:100%!important;max-width:100%!important;position:relative!important;
+  padding:0!important;margin:0!important;line-height:0!important;
+ }
+ .impactos-poster-image>img,.armazenamento-poster-image>img,.coleta-image-wrap>img,.educacao-poster-wrap>img,.dicas-image-wrap>img,.projeto-poster-interativo>img,.trail-poster img{
+  display:block!important;width:100%!important;max-width:100%!important;
+  height:auto!important;max-height:none!important;object-fit:contain!important;
+  margin:0!important;padding:0!important;
+ }
+ .impactos-hotspot,.armazenamento-hotspot,.coleta-hotspot,.educacao-hotspot,.dicas-hotspot,.poster-hotspot{
+  position:absolute!important;z-index:20!important;touch-action:manipulation!important;
+ }
+}
