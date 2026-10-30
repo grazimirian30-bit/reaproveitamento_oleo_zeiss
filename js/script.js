@@ -12,7 +12,7 @@ if ("caches" in window) { caches.keys().then(keys=>keys.filter(key=>key.startsWi
 /* Cartões de navegação maiores e acessíveis no celular (sem duplicação no desktop). */
 (function(){
  const holder=document.querySelector('.interactive-cover-image, .impactos-poster, .armazenamento-poster, .coleta-poster, .educacao-poster, .dicas-poster-wide, .projeto-poster');
- if(!holder||document.querySelector('.mobile-topic-links'))return;
+ if(!holder||holder.classList.contains('interactive-cover-image')||document.querySelector('.mobile-topic-links'))return;
  const topics=[['impactos.html','🌍 Impactos ambientais'],['armazenamento.html','🧴 Armazenamento correto'],['coleta.html','♻️ Coleta e reciclagem'],['educacao.html','🌱 Educação ambiental'],['dicas.html','💡 Dicas sustentáveis'],['projeto.html','🏢 Projeto ZEISS']];
  const nav=document.createElement('nav');nav.className='mobile-topic-links';nav.setAttribute('aria-label','Acessos para celular');
  const links=holder.classList.contains('interactive-cover-image')?topics:[['index.html','🏠 Início'],...topics];
