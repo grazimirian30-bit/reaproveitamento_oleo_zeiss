@@ -133,3 +133,22 @@
  .container{max-width:100%}
 }
 @media(max-width:370px){.mobile-topic-links a{font-size:.8rem;padding:8px 5px}}
+
+/* Correção mobile v30: hotspots sempre ancorados na imagem, sem menus externos. */
+.mobile-topic-links{display:none!important}
+@media(max-width:700px){
+ .impactos-poster-image,.armazenamento-poster-image,.coleta-image-wrap,.educacao-poster-wrap,.dicas-image-wrap,.projeto-poster-interativo{
+  display:block!important;position:relative!important;width:100%!important;height:auto!important;
+  padding:0!important;margin:0!important;overflow:visible!important;line-height:0!important;
+ }
+ .impactos-poster-image>img,.armazenamento-poster-image>img,.coleta-image-wrap>img,.educacao-poster-wrap>img,.dicas-image-wrap>img,.projeto-poster-interativo>img{
+  display:block!important;width:100%!important;height:auto!important;max-height:none!important;
+  object-fit:fill!important;aspect-ratio:auto!important;margin:0!important;padding:0!important;
+ }
+ .impactos-hotspot,.armazenamento-hotspot,.coleta-hotspot,.educacao-hotspot,.dicas-hotspot,.poster-hotspot{
+  display:block!important;position:absolute!important;z-index:20!important;box-sizing:border-box!important;
+  min-height:0!important;min-width:0!important;margin:0!important;padding:0!important;transform:none!important;
+  touch-action:manipulation!important;
+ }
+ .impactos-hotspot span,.armazenamento-hotspot span,.coleta-hotspot span,.educacao-hotspot span,.dicas-hotspot span,.poster-hotspot span{line-height:1!important}
+}
