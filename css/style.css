@@ -189,32 +189,3 @@
   width:100%!important;max-width:100%!important;height:auto!important;
  }
 }
-
-/* Mobile35: leitura vertical ampliada das sete páginas internas; capa intacta. */
-.mobile-infographic-reader{display:none}
-@media(max-width:700px){
- html.mobile-reader-ready .impactos-poster,
- html.mobile-reader-ready .armazenamento-poster,
- html.mobile-reader-ready .coleta-poster,
- html.mobile-reader-ready .educacao-poster,
- html.mobile-reader-ready .dicas-poster-wide,
- html.mobile-reader-ready .projeto-poster,
- html.mobile-reader-ready .trail-poster{display:none!important}
- .mobile-reader-ready .mobile-infographic-reader{
-  display:flex!important;flex-direction:column;gap:14px;width:100%;
-  margin:12px auto 28px;padding:0 12px;box-sizing:border-box;
- }
- .mobile-infographic-reader>h2{font-size:1.35rem;line-height:1.3;color:#174734;margin:4px 0 0}
- .mobile-infographic-reader>p{font-size:.94rem;line-height:1.45;margin:0 0 4px;color:#456456}
- .mobile-infographic-card{display:block!important;position:relative;min-width:0;width:100%;
-  padding:10px;background:#fff;border:1px solid #d4e5d3;border-radius:15px;
-  overflow:hidden;box-shadow:0 3px 12px #153d3218;text-decoration:none!important;color:#174734}
- .mobile-infographic-card>h3{font-size:1.03rem!important;line-height:1.3!important;margin:0 0 9px!important;color:#174734!important}
- .mobile-infographic-crop{position:relative!important;display:block!important;width:100%!important;height:auto!important;
-  margin:0!important;overflow:hidden!important;border-radius:9px;background:#f5f7eb;line-height:0}
- .mobile-infographic-crop>img{position:absolute!important;display:block!important;height:auto!important;min-width:0!important;
-  max-width:none!important;object-fit:fill!important;margin:0!important;padding:0!important;transform:none!important}
- a.mobile-infographic-card:focus-visible{outline:3px solid #d6a02a;outline-offset:2px}
- .dicas-poster-wide[hidden]+.mobile-infographic-reader,
- .trail-poster.hide+.mobile-infographic-reader{display:none!important}
-}
