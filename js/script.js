@@ -9,13 +9,4 @@ if ("serviceWorker" in navigator) { navigator.serviceWorker.getRegistrations().t
 if ("caches" in window) { caches.keys().then(keys=>keys.filter(key=>key.startsWith("oleo-consciente-")).forEach(key=>caches.delete(key))).catch(()=>{}); }
 
 
-/* Cartões de navegação maiores e acessíveis no celular (sem duplicação no desktop). */
-(function(){
- const holder=document.querySelector('.interactive-cover-image, .impactos-poster, .armazenamento-poster, .coleta-poster, .educacao-poster, .dicas-poster-wide, .projeto-poster');
- if(!holder||holder.classList.contains('interactive-cover-image')||document.querySelector('.mobile-topic-links'))return;
- const topics=[['impactos.html','🌍 Impactos ambientais'],['armazenamento.html','🧴 Armazenamento correto'],['coleta.html','♻️ Coleta e reciclagem'],['educacao.html','🌱 Educação ambiental'],['dicas.html','💡 Dicas sustentáveis'],['projeto.html','🏢 Projeto ZEISS']];
- const nav=document.createElement('nav');nav.className='mobile-topic-links';nav.setAttribute('aria-label','Acessos para celular');
- const links=holder.classList.contains('interactive-cover-image')?topics:[['index.html','🏠 Início'],...topics];
- for(const [href,label] of links){const a=document.createElement('a');a.href=href;a.textContent=label;if(current===href)a.setAttribute('aria-current','page');nav.appendChild(a)}
- holder.insertAdjacentElement('afterend',nav);
-})();
+/* As áreas clicáveis fazem parte das próprias imagens. Nenhum menu duplicado é inserido por JavaScript. */
