@@ -116,3 +116,20 @@
  .subpage-hero h1{font-size:clamp(1.5rem,6vw,2.1rem)}
  .subpage-hero .lead{font-size:1rem}
 }
+
+/* Navegação móvel acessível: mantém os cartazes inteiros e fornece botões legíveis. */
+.mobile-topic-links{display:none}
+@media(max-width:700px){
+ body{overflow-x:hidden}
+ .mobile-topic-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:100%;max-width:640px;padding:14px;margin:0 auto 18px;background:#eef5ec;border-radius:12px;box-sizing:border-box}
+ .mobile-topic-links a{display:flex;align-items:center;justify-content:center;text-align:center;min-width:0;min-height:55px;padding:10px 8px;border:2px solid #b6d7c0;border-radius:12px;background:#fff;color:#174734;text-decoration:none;font-size:.89rem;font-weight:800;line-height:1.3;overflow-wrap:anywhere}
+ .mobile-topic-links a[aria-current=page]{background:#fff1bd;border-color:#e0bd4c}
+ .mobile-topic-links a:focus-visible{outline:3px solid #e2a92f;outline-offset:2px}
+ .impactos-poster,.armazenamento-poster,.coleta-poster,.educacao-poster,.dicas-poster-wide,.projeto-poster{max-width:100%!important;width:100%!important;left:auto!important;transform:none!important;box-sizing:border-box}
+ .impactos-poster-image,.armazenamento-poster-image,.coleta-image-wrap,.educacao-poster-wrap,.dicas-image-wrap,.projeto-poster-interativo{width:100%;position:relative}
+ .impactos-poster-image img,.armazenamento-poster-image img,.coleta-image-wrap img,.educacao-poster-wrap img,.dicas-image-wrap img,.projeto-poster-interativo img{width:100%;height:auto;max-width:100%;object-fit:contain}
+ .site-header .menu-toggle{min-height:44px}
+ .educational-layout,.projeto-intro{grid-template-columns:minmax(0,1fr)!important}
+ .container{max-width:100%}
+}
+@media(max-width:370px){.mobile-topic-links a{font-size:.8rem;padding:8px 5px}}
