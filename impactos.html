@@ -60,9 +60,9 @@ main{width:100%;min-height:calc(100svh - 56px);display:flex;align-items:center;j
 main{display:block;min-height:0;padding:0;margin:0}
 .poster{position:relative;display:block;width:100%;max-width:1600px;height:auto;aspect-ratio:auto;margin:0 auto;overflow:visible}
 .poster picture,.poster img{display:block;width:100%;height:auto;aspect-ratio:auto;max-height:none;object-fit:contain}
-.poster .ponto{position:absolute;z-index:10;display:grid;place-items:center;transform:translate(-50%,-50%);width:5.8%;min-width:28px;aspect-ratio:1;height:auto;background:#167a51;border:2px solid white;border-radius:50%;color:white;box-shadow:0 2px 9px #0006;text-decoration:none;font-size:clamp(17px,2.8vw,32px);font-weight:800;line-height:1;cursor:pointer;touch-action:manipulation}
-.poster .ponto span{display:block}
-.poster .ponto:focus-visible{outline:3px solid #ffd65c;outline-offset:2px}
+.poster .ponto{position:absolute;z-index:10;display:block;transform:translate(-50%,-50%);width:6%;min-width:28px;aspect-ratio:1;height:auto;background:transparent;border:0;border-radius:50%;color:transparent;box-shadow:none;text-decoration:none;font-size:0;cursor:pointer;touch-action:manipulation}
+.poster .ponto span{visibility:hidden}
+.poster .ponto:focus-visible{outline:3px solid #ffd65c;outline-offset:2px;background:#ffffff30}
 @media(max-width:700px){
 .poster{width:100%;max-width:650px;aspect-ratio:auto}
 .poster picture,.poster img{height:auto;aspect-ratio:auto}
