@@ -209,3 +209,9 @@
 .pfe-atividade button:focus-visible,.pfe-atividade a:focus-visible{outline:3px solid #e1aa26;outline-offset:3px}
 @media(max-width:700px){.pfe-atividade{margin:18px 0;padding:16px 13px}.pfe-opcoes{grid-template-columns:1fr}.pfe-escolha{min-height:56px}.pfe-retorno{font-size:.98rem}}
 @media(prefers-reduced-motion:reduce){.pfe-atividade *{scroll-behavior:auto!important;transition:none!important}}
+
+/* Destaque visual das novas atividades, sem alterar os infográficos. */
+.pfe-novidade-texto{margin:22px auto 0!important;padding:12px 16px;background:#153e31;color:#fff;border-radius:14px;font:600 1rem/1.5 system-ui,sans-serif;max-width:1040px}
+.pfe-novidade-texto strong{color:#ffdf83}
+.pfe-atividade{background:linear-gradient(150deg,#e8f7e7,#fff9e7)!important;border:2px solid #6ca77b!important;box-shadow:0 12px 30px #183f3220!important}
+.pfe-atividade__etiqueta{color:#15593a!important}
