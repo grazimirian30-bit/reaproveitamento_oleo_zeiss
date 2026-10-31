@@ -101,10 +101,8 @@ main{display:block;min-height:0;padding:0;margin:0}
 <body><div class="oc-barra"><nav aria-label="Navegação principal por ícones"><a href="index.html" title="Início"><span class="oc-icone" aria-hidden="true">🏠</span><span>Início</span></a><a href="impactos.html" aria-current="page" title="Impactos"><span class="oc-icone" aria-hidden="true">🌍</span><span>Impactos</span></a><a href="armazenamento.html" title="Armazenamento"><span class="oc-icone" aria-hidden="true">🫙</span><span>Armazenamento</span></a><a href="coleta.html" title="Coleta"><span class="oc-icone" aria-hidden="true">♻️</span><span>Coleta</span></a><a href="educacao.html" title="Educação"><span class="oc-icone" aria-hidden="true">🌱</span><span>Educação</span></a><a href="dicas.html" title="Dicas"><span class="oc-icone" aria-hidden="true">💡</span><span>Dicas</span></a><a href="projeto.html" title="Projeto ZEISS"><span class="oc-icone" aria-hidden="true">🌿</span><span>Projeto ZEISS</span></a><a href="trilha.html" title="Trilha"><span class="oc-icone" aria-hidden="true">🎮</span><span>Trilha</span></a></nav></div>
 <header class="topbar">
 <a class="logo" href="index.html">Óleo <strong>Consciente</strong></a>
-<button class="menu-button" type="button" id="abrir-menu" aria-expanded="false" aria-controls="nav">☰ Menu</button>
-<nav class="nav" id="nav" aria-label="Navegação" hidden>
-<a href="index.html">Início</a><a href="impactos.html" aria-current="page">Impactos ambientais</a><a href="armazenamento.html">Armazenamento correto</a><a href="coleta.html">Coleta e reciclagem</a><a href="educacao.html">Educação ambiental</a><a href="dicas.html">Dicas sustentáveis</a><a href="projeto.html">O projeto</a><a href="trilha.html">Trilha do Óleo Consciente</a>
-</nav>
+
+
 </header>
 <main id="conteudo">
 <div class="poster" aria-label="Ilustração interativa dos impactos ambientais">
@@ -128,10 +126,6 @@ main{display:block;min-height:0;padding:0;margin:0}
 <section id="impacto-detalhe-6" class="painel" aria-labelledby="impacto-titulo-6"><a class="painel-fundo" href="#conteudo" aria-label="Fechar explicação"></a><div class="painel-conteudo" role="dialog" aria-modal="true" aria-labelledby="impacto-titulo-6"><a class="painel-x" href="#conteudo" aria-label="Fechar">✕</a><p class="painel-selo">Você sabia? · 6 de 8</p><h2 id="impacto-titulo-6">Sobrecarga do sistema de esgoto</h2><p>A gordura acumulada dificulta a operação das redes e das estações de tratamento, aumentando a necessidade de limpeza e manutenção do sistema de saneamento.</p><a class="painel-voltar" href="#conteudo">Voltar ao desenho</a></div></section>
 <section id="impacto-detalhe-7" class="painel" aria-labelledby="impacto-titulo-7"><a class="painel-fundo" href="#conteudo" aria-label="Fechar explicação"></a><div class="painel-conteudo" role="dialog" aria-modal="true" aria-labelledby="impacto-titulo-7"><a class="painel-x" href="#conteudo" aria-label="Fechar">✕</a><p class="painel-selo">Você sabia? · 7 de 8</p><h2 id="impacto-titulo-7">Riscos para a saúde</h2><p>O descarte incorreto pode contribuir para entupimentos, vazamentos e problemas de saneamento. O contato com ambientes contaminados pode representar riscos à saúde.</p><a class="painel-voltar" href="#conteudo">Voltar ao desenho</a></div></section>
 <section id="impacto-detalhe-8" class="painel" aria-labelledby="impacto-titulo-8"><a class="painel-fundo" href="#conteudo" aria-label="Fechar explicação"></a><div class="painel-conteudo" role="dialog" aria-modal="true" aria-labelledby="impacto-titulo-8"><a class="painel-x" href="#conteudo" aria-label="Fechar">✕</a><p class="painel-selo">Você sabia? · 8 de 8</p><h2 id="impacto-titulo-8">Emissão de gases de efeito estufa</h2><p>A queima ou a destinação inadequada de resíduos pode gerar emissões. O impacto climático depende de como o óleo é tratado; por isso, é importante encaminhá-lo corretamente.</p><a class="painel-voltar" href="#conteudo">Voltar ao desenho</a></div></section>
-<script>
-const menu=document.getElementById('abrir-menu'),nav=document.getElementById('nav');
-menu.addEventListener('click',()=>{nav.hidden=!nav.hidden;menu.setAttribute('aria-expanded',String(!nav.hidden))});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(location.hash.startsWith('#impacto-detalhe-'))location.hash='conteudo';nav.hidden=true;menu.setAttribute('aria-expanded','false')}});
-</script>
+
 </body>
 </html>
