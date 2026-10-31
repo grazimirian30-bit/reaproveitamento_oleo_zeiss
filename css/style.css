@@ -189,3 +189,23 @@
   width:100%!important;max-width:100%!important;height:auto!important;
  }
 }
+
+/* PFE 2026 — atividades educativas interativas, móveis e acessíveis.
+   Mantém os infográficos originais e evita deformá-los. */
+.pfe-atividade{margin:28px auto;max-width:1040px;padding:clamp(16px,3vw,30px);background:#f3f8f1;border:1px solid #c8dfcb;border-radius:20px;scroll-margin-top:24px}
+.pfe-atividade__etiqueta{display:block;color:#246344;font-size:.78rem;font-weight:850;letter-spacing:.09em;text-transform:uppercase;margin-bottom:8px}
+.pfe-atividade h2{color:#153f30;font-size:clamp(1.35rem,3vw,1.9rem);line-height:1.3;margin:0 0 12px}
+.pfe-atividade>p{max-width:72ch;line-height:1.65}
+.pfe-opcoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:12px;margin:18px 0}
+.pfe-escolha{font:inherit;line-height:1.4;border:2px solid #b7d4be;background:#fff;border-radius:13px;padding:17px 14px;min-height:70px;color:#183f2f;font-weight:700;text-align:left;cursor:pointer;touch-action:manipulation}
+.pfe-escolha:hover,.pfe-escolha:focus-visible{border-color:#26794a;background:#ebf7e9;outline-offset:3px}
+.pfe-escolha[aria-pressed="true"]{border-color:#175d38;background:#e1f4df}
+.pfe-retorno{min-height:65px;background:#fff;border-left:5px solid #8caf82;border-radius:10px;padding:14px;margin:12px 0;line-height:1.6}
+.pfe-retorno[data-resultado="acerto"]{border-color:#238047}
+.pfe-retorno[data-resultado="revisar"]{border-color:#c28e27}
+.pfe-aprender{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}
+.pfe-aprender a{display:inline-block;background:#175d42;color:#fff;text-decoration:none;padding:11px 17px;border-radius:10px;font-weight:750}
+.pfe-aprender a:hover,.pfe-aprender a:focus-visible{background:#0d4530;color:#fff}
+.pfe-atividade button:focus-visible,.pfe-atividade a:focus-visible{outline:3px solid #e1aa26;outline-offset:3px}
+@media(max-width:700px){.pfe-atividade{margin:18px 0;padding:16px 13px}.pfe-opcoes{grid-template-columns:1fr}.pfe-escolha{min-height:56px}.pfe-retorno{font-size:.98rem}}
+@media(prefers-reduced-motion:reduce){.pfe-atividade *{scroll-behavior:auto!important;transition:none!important}}
