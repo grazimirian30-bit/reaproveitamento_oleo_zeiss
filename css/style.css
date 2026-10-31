@@ -211,7 +211,10 @@
 @media(prefers-reduced-motion:reduce){.pfe-atividade *{scroll-behavior:auto!important;transition:none!important}}
 
 /* Destaque visual das novas atividades, sem alterar os infográficos. */
-.pfe-novidade-texto{margin:22px auto 0!important;padding:12px 16px;background:#153e31;color:#fff;border-radius:14px;font:600 1rem/1.5 system-ui,sans-serif;max-width:1040px}
-.pfe-novidade-texto strong{color:#ffdf83}
 .pfe-atividade{background:linear-gradient(150deg,#e8f7e7,#fff9e7)!important;border:2px solid #6ca77b!important;box-shadow:0 12px 30px #183f3220!important}
 .pfe-atividade__etiqueta{color:#15593a!important}
+
+/* Jogo de ordenação: botões desabilitados representam etapas concluídas. */
+.pfe-jogo-ordem{margin-top:28px}
+.pfe-jogo-ordem .pfe-escolha:disabled,.pfe-jogo-ordem .pfe-etapa-concluida{background:#dbe9dc!important;border-color:#659b73!important;color:#255c3e!important;cursor:default;opacity:1}
+.pfe-jogo-ordem .pfe-reiniciar{background:#fffbe9;max-width:220px;width:100%;min-height:50px;text-align:center}
