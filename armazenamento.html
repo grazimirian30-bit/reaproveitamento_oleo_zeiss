@@ -9,19 +9,34 @@ document.addEventListener('DOMContentLoaded',function(){
  const botao=document.querySelector('.pfe-mostrar-info');
  const figura=document.querySelector('.armazenamento-poster');
  if(!botao||!figura)return;
- const container=figura.parentElement;
- const conteudos=Array.from(container.children).filter(function(el){
-  return el!==figura&&!el.classList.contains('pfe-abrir-painel')&&!el.classList.contains('pfe-atividade')&&!el.matches('[data-pfe-atividade],[data-pfe-ordem],.quiz');
+ const area=figura.parentElement;
+ const container=area.querySelector('.educational-layout');
+ const sections=[...area.querySelectorAll('.article-section')].filter(el=>!el.closest('.pfe-atividade'));
+ const galeria=area.querySelector('.documentary-gallery');
+ const foto=area.querySelector('.foto-documental');
+ const fontes=area.querySelector('.sources');
+ const extras=[...area.querySelectorAll('.evidence-section')];
+ const cards=document.createElement('section');cards.className='pfe-cards-interativos';cards.setAttribute('aria-label','Escolha uma imagem para aprender');
+ const titulo=document.createElement('h2');titulo.textContent='Toque em uma imagem para descobrir mais';cards.append(titulo);
+ const grade=document.createElement('div');grade.className='pfe-cards-grade';cards.append(grade);
+ const temas=["⏳","🥣","🧴","🔒","📍","🛡️"];
+ const grupos=sections.map((el,i)=>({el,icone:temas[i%temas.length],nome:el.querySelector('h2,h3')?.textContent?.trim()||'Saiba mais'}));
+ if(galeria)grupos.push({el:galeria,icone:'📷',nome:'Fotografias e contexto'});
+ if(foto)grupos.push({el:foto,icone:'📸',nome:'Registros reais do Rio de Janeiro'});
+ extras.forEach(el=>grupos.push({el,icone:'🔬',nome:el.querySelector('h2')?.textContent?.trim()||'Evidências'}));
+ if(fontes)grupos.push({el:fontes,icone:'📚',nome:'Fontes e referências'});
+ grupos.forEach(({el,icone,nome},i)=>{
+  const detail=document.createElement('details');detail.className='pfe-card-visual';detail.name='pfe-aprender';
+  const summary=document.createElement('summary');
+  const imagem=document.createElement('span');imagem.className='pfe-card-icone';imagem.textContent=icone;imagem.setAttribute('aria-hidden','true');
+  const label=document.createElement('span');label.className='pfe-card-label';label.textContent=nome;
+  const dica=document.createElement('span');dica.className='pfe-card-dica';dica.textContent='Toque para abrir';
+  summary.append(imagem,label,dica);detail.append(summary);
+  const conteudo=document.createElement('div');conteudo.className='pfe-card-conteudo';conteudo.append(el);detail.append(conteudo);grade.append(detail);
+  detail.addEventListener('toggle',()=>{if(detail.open){dica.textContent='Toque para fechar';}else{dica.textContent='Toque para abrir';}});
  });
- conteudos.forEach(function(el){el.classList.add('pfe-informacoes-ocultas');});
- if(conteudos.length)conteudos[0].id='pfe-info-detalhada';
- botao.addEventListener('click',function(){
-  const abrir=botao.getAttribute('aria-expanded')!=='true';
-  conteudos.forEach(function(el){el.classList.toggle('pfe-informacoes-abertas',abrir);});
-  botao.setAttribute('aria-expanded',String(abrir));
-  botao.textContent=abrir?'✕ Ocultar informações':'📖 Toque para explorar as informações do desenho';
-  if(abrir&&conteudos[0])conteudos[0].scrollIntoView({behavior:'smooth',block:'nearest'});
- });
+ const antigo=botao.closest('.pfe-abrir-painel');if(antigo)antigo.replaceWith(cards);else figura.after(cards);
+ if(container){const aside=container.querySelector('aside');if(aside){const sum=aside.querySelector('.aside-summary');if(sum){const d=document.createElement('details');d.className='pfe-resumo-discreto';d.innerHTML='<summary>📋 Resumo rápido</summary>';d.append(sum);cards.after(d);}aside.remove();}if(!container.querySelector('.article-section'))container.remove();}
 });
 </script><style>.foto-documental{max-width:780px;margin:18px auto 30px;padding:14px;background:#f2f8f1;border:1px solid #d2e4d4;border-radius:16px}.foto-documental h2{font-size:clamp(1.1rem,2.8vw,1.45rem);margin:0 0 12px;color:#18543b}.foto-documental figure{margin:0}.foto-documental img{display:block;width:100%;height:auto;max-height:390px;object-fit:cover;border-radius:12px}.foto-documental figcaption{font-size:.87rem;line-height:1.5;color:#385747;margin-top:9px}.foto-documental a{overflow-wrap:anywhere}</style></head><body><a class="skip" href="#conteudo">Ir ao conteúdo</a><header class="site-header"><div class="header-wrap"><a class="brand" href="index.html">Óleo <span>Consciente</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="menu">☰ Menu</button><nav class="site-nav" id="menu" aria-label="Navegação principal"><a href="index.html">Início</a><a href="impactos.html">Impactos ambientais</a><a href="armazenamento.html">Armazenamento correto</a><a href="coleta.html">Coleta e reciclagem</a><a href="educacao.html">Educação ambiental</a><a href="dicas.html">Dicas sustentáveis</a><a href="projeto.html">O projeto</a></nav></div></header><main id="conteudo"><section class="subpage-hero"><div class="container"><p class="breadcrumbs"><a href="index.html">Início</a> <span aria-hidden="true">/</span> Armazenamento correto</p><p class="eyebrow">Eixo 02 · Orientação prática</p><h1>Como armazenar o óleo usado com segurança</h1><p class="lead">O armazenamento correto é o primeiro passo para que o óleo possa ser encaminhado à coleta sem causar sujeira, vazamentos ou acidentes.</p></div></section><div class="container"><section class="pfe-atividade" id="decisao-armazenamento" data-pfe-atividade aria-labelledby="decisao-armazenamento-titulo">
 <span class="pfe-atividade__etiqueta">Jogo educativo · Armazenamento seguro</span>
