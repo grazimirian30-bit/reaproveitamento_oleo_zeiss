@@ -218,3 +218,13 @@
 .pfe-jogo-ordem{margin-top:28px}
 .pfe-jogo-ordem .pfe-escolha:disabled,.pfe-jogo-ordem .pfe-etapa-concluida{background:#dbe9dc!important;border-color:#659b73!important;color:#255c3e!important;cursor:default;opacity:1}
 .pfe-jogo-ordem .pfe-reiniciar{background:#fffbe9;max-width:220px;width:100%;min-height:50px;text-align:center}
+
+/* Revisão técnica: acessibilidade e telas pequenas sem modificar artes. */
+@media(max-width:700px){
+  html,body{max-width:100%;overflow-x:clip}
+  .container,.educational-layout,.educational-article,.projeto-grade,.projeto-bloco{min-width:0;max-width:100%}
+  .container img,.educational-layout img{max-width:100%;height:auto}
+  .pfe-atividade button,.quiz button,.pfe-mostrar-info{min-height:48px;touch-action:manipulation}
+}
+.pfe-mostrar-info:focus-visible,.dicas-hotspot:focus-visible,.impactos-hotspot:focus-visible,.armazenamento-hotspot:focus-visible,.coleta-hotspot:focus-visible,.educacao-hotspot:focus-visible{outline:3px solid #f2bb35;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
