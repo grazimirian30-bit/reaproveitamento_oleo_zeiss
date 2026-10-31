@@ -68,6 +68,11 @@ main{display:block;min-height:0;padding:0;margin:0}
 .poster picture,.poster img{height:auto;aspect-ratio:auto}
 .poster .ponto{width:10%;min-width:30px;font-size:clamp(18px,5vw,28px)}
 }
+
+/* Destacar somente os quatro pontos informados, mantendo os demais intactos. */
+.poster .ponto-3,.poster .ponto-4,.poster .ponto-6,.poster .ponto-7{background:#16834e;border:3px solid #fff;box-shadow:0 0 0 3px #ffffff80;color:#fff;font-size:clamp(18px,2.4vw,34px);display:grid;place-items:center}
+.poster .ponto-3 span,.poster .ponto-4 span,.poster .ponto-6 span,.poster .ponto-7 span{visibility:visible;line-height:1;font-weight:800}
+@media(max-width:700px){.poster .ponto-3,.poster .ponto-4,.poster .ponto-6,.poster .ponto-7{font-size:clamp(18px,5vw,28px)}}
 </style></head>
 <body>
 <header class="topbar">
