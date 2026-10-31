@@ -54,17 +54,19 @@ main{width:100%;min-height:calc(100svh - 56px);display:flex;align-items:center;j
 .painel-x{position:absolute;right:14px;top:12px;color:#173f31;text-decoration:none;font-size:1.5rem;padding:6px}
 .painel-voltar{display:inline-block;background:#176547;color:white!important;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;margin-top:10px}
 </style>
-<style id="hotspots-alinhados-tamanho-real">
-/* O contêiner acompanha as dimensões reais da arte, evitando faixas vazias
-   criadas por proporções 16:9/9:16 forçadas. */
-main{display:block!important;min-height:0!important;height:auto!important}
-.poster{display:block!important;position:relative!important;width:100%!important;max-width:1600px!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;margin:0 auto!important}
-.poster picture{display:block!important;width:100%!important;height:auto!important;aspect-ratio:auto!important}
-.poster img{display:block!important;width:100%!important;height:auto!important;max-height:none!important;aspect-ratio:auto!important;object-fit:fill!important}
-.poster .ponto{position:absolute!important;z-index:10!important;transform:translate(-50%,-50%)!important}
+<style id="impactos-hotspots-mesmo-padrao">
+/* Mesmo padrão das demais páginas: imagem inteira em largura disponível,
+   botões posicionados em percentuais sobre o próprio contêiner. */
+main{display:block;min-height:0;padding:0;margin:0}
+.poster{position:relative;display:block;width:100%;max-width:1600px;height:auto;aspect-ratio:auto;margin:0 auto;overflow:visible}
+.poster picture,.poster img{display:block;width:100%;height:auto;aspect-ratio:auto;max-height:none;object-fit:contain}
+.poster .ponto{position:absolute;z-index:10;display:grid;place-items:center;transform:translate(-50%,-50%);width:5.8%;min-width:28px;aspect-ratio:1;height:auto;background:#167a51;border:2px solid white;border-radius:50%;color:white;box-shadow:0 2px 9px #0006;text-decoration:none;font-size:clamp(17px,2.8vw,32px);font-weight:800;line-height:1;cursor:pointer;touch-action:manipulation}
+.poster .ponto span{display:block}
+.poster .ponto:focus-visible{outline:3px solid #ffd65c;outline-offset:2px}
 @media(max-width:700px){
-.poster{width:100%!important;max-width:650px!important;aspect-ratio:auto!important}
-.poster picture,.poster img{height:auto!important;aspect-ratio:auto!important}
+.poster{width:100%;max-width:650px;aspect-ratio:auto}
+.poster picture,.poster img{height:auto;aspect-ratio:auto}
+.poster .ponto{width:10%;min-width:30px;font-size:clamp(18px,5vw,28px)}
 }
 </style></head>
 <body>
@@ -79,14 +81,14 @@ main{display:block!important;min-height:0!important;height:auto!important}
 <div class="poster" aria-label="Ilustração interativa dos impactos ambientais">
 <picture><source media="(max-width:700px)" srcset="./Impactos%20Ambientais%20do%20%C3%93leo%20Usado%20(2).png">
 <img src="./Impactos%20Ambientais%20do%20%C3%93leo%20Usado%20(3).png" alt="Impactos Ambientais: toque nos sinais de mais para conhecer os efeitos do descarte incorreto do óleo de cozinha."></picture>
-<a class="ponto ponto-1" href="#impacto-detalhe-1" aria-label="Abrir informação: Descarte na pia" title="Descarte na pia"></a>
-<a class="ponto ponto-2" href="#impacto-detalhe-2" aria-label="Abrir informação: Entupimento de tubulações" title="Entupimento de tubulações"></a>
-<a class="ponto ponto-3" href="#impacto-detalhe-3" aria-label="Abrir informação: Poluição dos rios e lagos" title="Poluição dos rios e lagos"></a>
-<a class="ponto ponto-4" href="#impacto-detalhe-4" aria-label="Abrir informação: Prejuízos à vida aquática" title="Prejuízos à vida aquática"></a>
-<a class="ponto ponto-5" href="#impacto-detalhe-5" aria-label="Abrir informação: Contaminação do solo" title="Contaminação do solo"></a>
-<a class="ponto ponto-6" href="#impacto-detalhe-6" aria-label="Abrir informação: Sobrecarga do sistema de esgoto" title="Sobrecarga do sistema de esgoto"></a>
-<a class="ponto ponto-7" href="#impacto-detalhe-7" aria-label="Abrir informação: Riscos para a saúde" title="Riscos para a saúde"></a>
-<a class="ponto ponto-8" href="#impacto-detalhe-8" aria-label="Abrir informação: Emissão de gases de efeito estufa" title="Emissão de gases de efeito estufa"></a>
+<a class="ponto ponto-1" href="#impacto-detalhe-1" aria-label="Abrir informação: Descarte na pia" title="Descarte na pia"><span aria-hidden="true">+</span></a>
+<a class="ponto ponto-2" href="#impacto-detalhe-2" aria-label="Abrir informação: Entupimento de tubulações" title="Entupimento de tubulações"><span aria-hidden="true">+</span></a>
+<a class="ponto ponto-3" href="#impacto-detalhe-3" aria-label="Abrir informação: Poluição dos rios e lagos" title="Poluição dos rios e lagos"><span aria-hidden="true">+</span></a>
+<a class="ponto ponto-4" href="#impacto-detalhe-4" aria-label="Abrir informação: Prejuízos à vida aquática" title="Prejuízos à vida aquática"><span aria-hidden="true">+</span></a>
+<a class="ponto ponto-5" href="#impacto-detalhe-5" aria-label="Abrir informação: Contaminação do solo" title="Contaminação do solo"><span aria-hidden="true">+</span></a>
+<a class="ponto ponto-6" href="#impacto-detalhe-6" aria-label="Abrir informação: Sobrecarga do sistema de esgoto" title="Sobrecarga do sistema de esgoto"><span aria-hidden="true">+</span></a>
+<a class="ponto ponto-7" href="#impacto-detalhe-7" aria-label="Abrir informação: Riscos para a saúde" title="Riscos para a saúde"><span aria-hidden="true">+</span></a>
+<a class="ponto ponto-8" href="#impacto-detalhe-8" aria-label="Abrir informação: Emissão de gases de efeito estufa" title="Emissão de gases de efeito estufa"><span aria-hidden="true">+</span></a>
 </div>
 </main>
 <section id="impacto-detalhe-1" class="painel" aria-labelledby="impacto-titulo-1"><a class="painel-fundo" href="#conteudo" aria-label="Fechar explicação"></a><div class="painel-conteudo" role="dialog" aria-modal="true" aria-labelledby="impacto-titulo-1"><a class="painel-x" href="#conteudo" aria-label="Fechar">✕</a><p class="painel-selo">Você sabia? · 1 de 8</p><h2 id="impacto-titulo-1">Descarte na pia</h2><p>O óleo usado não deve ser despejado na pia. Ele pode aderir aos canos e se acumular com outros resíduos. Deixe esfriar, guarde em recipiente fechado e encaminhe para coleta.</p><a class="painel-voltar" href="#conteudo">Voltar ao desenho</a></div></section>
