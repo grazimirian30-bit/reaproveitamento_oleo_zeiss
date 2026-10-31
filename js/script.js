@@ -25,3 +25,38 @@ document.querySelectorAll("[data-pfe-atividade]").forEach(atividade=>{
     resultado.hidden=false;
   }));
 });
+
+/* Jogo educativo: organizar o armazenamento sem coletar dados. */
+document.querySelectorAll("[data-pfe-ordem]").forEach(jogo=>{
+  const botoes=[...jogo.querySelectorAll("[data-etapa]")];
+  const aviso=jogo.querySelector("[data-pfe-ordem-retorno]");
+  const progresso=jogo.querySelector("[data-pfe-ordem-progresso]");
+  const reiniciar=jogo.querySelector("[data-pfe-ordem-reiniciar]");
+  let etapa=1;
+  const atualizar=()=>{
+    progresso.textContent=etapa<=5?"Etapa "+etapa+" de 5":"Jogo concluído · 5 de 5 etapas";
+  };
+  botoes.forEach(botao=>botao.addEventListener("click",()=>{
+    const escolha=Number(botao.dataset.etapa);
+    if(escolha<etapa)return;
+    if(escolha!==etapa){
+      aviso.textContent="💡 Essa ação faz parte do processo, mas ainda não é a próxima etapa. Confira a sequência e tente novamente.";
+      aviso.dataset.resultado="revisar";
+      return;
+    }
+    botao.disabled=true;
+    botao.classList.add("pfe-etapa-concluida");
+    etapa+=1;
+    aviso.dataset.resultado="acerto";
+    aviso.textContent=etapa>5?"🏆 Parabéns! Você completou a sequência segura. Confira sempre as orientações do ponto de coleta.":"✅ Etapa correta! Escolha a próxima ação.";
+    atualizar();
+  }));
+  reiniciar?.addEventListener("click",()=>{
+    etapa=1;
+    botoes.forEach(botao=>{botao.disabled=false;botao.classList.remove("pfe-etapa-concluida")});
+    aviso.textContent="Escolha a primeira etapa para começar.";
+    aviso.dataset.resultado="";
+    atualizar();
+  });
+  atualizar();
+});
