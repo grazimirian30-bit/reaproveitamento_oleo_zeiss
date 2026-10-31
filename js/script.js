@@ -10,3 +10,18 @@ if ("caches" in window) { caches.keys().then(keys=>keys.filter(key=>key.startsWi
 
 
 /* As áreas clicáveis fazem parte das próprias imagens. Nenhum menu duplicado é inserido por JavaScript. */
+
+/* PFE 2026: questões formativas acessíveis, sem coleta de dados pessoais.
+   Os botões são nativos e respondem a clique, Enter e Espaço. */
+document.querySelectorAll("[data-pfe-atividade]").forEach(atividade=>{
+  const escolhas=[...atividade.querySelectorAll("[data-pfe-escolha]")];
+  const resultado=atividade.querySelector("[data-pfe-resultado]");
+  if(!resultado||!escolhas.length)return;
+  escolhas.forEach(botao=>botao.addEventListener("click",()=>{
+    const correto=botao.dataset.correto==="sim";
+    escolhas.forEach(x=>x.setAttribute("aria-pressed",String(x===botao)));
+    resultado.textContent=(correto?"✅ Boa escolha! ":"💡 Vamos revisar: ")+(botao.dataset.explicacao||"Confira as orientações desta página.");
+    resultado.dataset.resultado=correto?"acerto":"revisar";
+    resultado.hidden=false;
+  }));
+});
