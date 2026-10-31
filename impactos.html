@@ -24,14 +24,14 @@ main{width:100%;min-height:calc(100svh - 56px);display:flex;align-items:center;j
 .poster img{object-fit:contain}
 .ponto{position:absolute;display:block;z-index:2;width:5.5%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;background:transparent;cursor:pointer;touch-action:manipulation}
 .ponto:focus-visible{outline:3px solid #fff;outline-offset:2px;background:#ffffff44}
-.ponto-1{left:4.85%;top:28.8%}
-.ponto-2{left:4.61%;top:55.8%}
-.ponto-3{left:55.1%;top:55.9%}
+.ponto-1{left:4.85%;top:28.45%}
+.ponto-2{left:4.67%;top:55.8%}
+.ponto-3{left:55.1%;top:55.8%}
 .ponto-4{left:84.35%;top:53.5%}
-.ponto-5{left:7.89%;top:77.6%}
-.ponto-6{left:55.2%;top:34%}
+.ponto-5{left:7.77%;top:77.4%}
+.ponto-6{left:55.2%;top:34.05%}
 .ponto-7{left:68.3%;top:77.6%}
-.ponto-8{left:79.2%;top:15.8%}
+.ponto-8{left:79.05%;top:15.65%}
 @media(max-width:700px){
 .poster{width:min(100vw,calc((100svh - 56px)*9/16));aspect-ratio:9/16}
 .ponto{width:11%}
@@ -69,10 +69,7 @@ main{display:block;min-height:0;padding:0;margin:0}
 .poster .ponto{width:10%;min-width:30px;font-size:clamp(18px,5vw,28px)}
 }
 
-/* Destacar somente os quatro pontos informados, mantendo os demais intactos. */
-.poster .ponto-3,.poster .ponto-4,.poster .ponto-6,.poster .ponto-7{background:#16834e;border:3px solid #fff;box-shadow:0 0 0 3px #ffffff80;color:#fff;font-size:clamp(18px,2.4vw,34px);display:grid;place-items:center}
-.poster .ponto-3 span,.poster .ponto-4 span,.poster .ponto-6 span,.poster .ponto-7 span{visibility:visible;line-height:1;font-weight:800}
-@media(max-width:700px){.poster .ponto-3,.poster .ponto-4,.poster .ponto-6,.poster .ponto-7{font-size:clamp(18px,5vw,28px)}}
+/* Os oito sinais já estão desenhados na arte; áreas de clique transparentes sobre eles. */
 </style></head>
 <body>
 <header class="topbar">
