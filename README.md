@@ -1,5 +1,5 @@
 # Óleo Consciente — PFE
-Site educativo sobre aproveitamento e reciclagem de óleos e gorduras residenciais, para a comunidade escolar da Escola Estadual Carlos Gomes.
+Site educativo sobre aproveitamento e reciclagem de óleos e gorduras residenciais, para a Carla Zeiss.
 
 ## Estrutura
 - Sete páginas HTML: Início, Impactos, Armazenamento, Coleta, Educação, Dicas e Projeto.
