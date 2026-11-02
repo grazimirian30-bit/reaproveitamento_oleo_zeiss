@@ -445,6 +445,10 @@ host.querySelectorAll("[data-origem]").forEach(function(holder){
  if(id==="entrevista-pfe"){
    const conclusion=old.querySelector(".oc-conclusao");
    if(conclusion)conclusion.remove();
+   const heading=old.querySelector("#oc-entrevista-titulo");
+   if(heading)heading.textContent="Entrevista de campo — registro das respostas";
+   const opening=old.querySelector("#oc-entrevista-titulo + p");
+   if(opening)opening.textContent="Síntese da entrevista presencial semiestruturada com profissional de Meio Ambiente, organizada por temas e baseada no roteiro de 15 perguntas. As respostas representam relatos do entrevistado, não uma avaliação estatística.";
  }
  if(id==="oc-avaliacao"){
    const status=old.querySelector(".oc-limite:last-child");
@@ -466,7 +470,7 @@ function show(topic,trigger){
  const foundation=target.querySelector("#fundamentacao-cientifica");
  if(foundation){foundation.classList.add("pfe-visivel");foundation.open=true;}
  host.querySelector(".oc-assunto-navegacao").hidden=topic==="justificativa";
- if(trigger)opener=trigger;
+ if(trigger && trigger.classList.contains("oc-painel-area"))opener=trigger;
  if(!dialog.open && typeof dialog.showModal==="function")dialog.showModal();
  dialog.scrollTop=0;
  const first=target.querySelector("h2");
